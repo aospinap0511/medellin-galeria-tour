@@ -77,7 +77,16 @@ const TRANSLATIONS = {
     footerTitle2: "Contacto",
     btnStory: '<i class="fa-solid fa-book-open"></i> Conoce nuestra historia',
     btnGallery: '<i class="fa-solid fa-images"></i> Ver Galería Completa',
-    btnReviews: '<i class="fa-solid fa-comments"></i> Leer más reseñas'
+    btnReviews: '<i class="fa-solid fa-comments"></i> Leer más reseñas',
+    footerCopy: "&copy; 2026 Medellín Galería Tour. Todos los derechos reservados.",
+    aboutTag2: "Sobre Nosotros",
+    aboutTitle2: "Turismo con Propósito",
+    galleryTag2: "Visuales",
+    galleryTitle2: "Galería Completa",
+    galleryDesc2: "Nuestra comunidad y nuestros viajeros a través del lente.",
+    reviewsTag2: "Testimonios Reales",
+    reviewsTitle2: "Lo que dicen de nosotros",
+    reviewsDesc2: "La confianza se construye con experiencias auténticas."
   },
   en: {
     topBar1: '<i class="fa-solid fa-paintbrush"></i> Medellín is a living art gallery',
@@ -153,7 +162,16 @@ const TRANSLATIONS = {
     footerTitle2: "Contact",
     btnStory: '<i class="fa-solid fa-book-open"></i> Read our story',
     btnGallery: '<i class="fa-solid fa-images"></i> View Full Gallery',
-    btnReviews: '<i class="fa-solid fa-comments"></i> Read more reviews'
+    btnReviews: '<i class="fa-solid fa-comments"></i> Read more reviews',
+    footerCopy: "&copy; 2026 Medellín Galería Tour. All rights reserved.",
+    aboutTag2: "About Us",
+    aboutTitle2: "Purpose-Driven Tourism",
+    galleryTag2: "Visuals",
+    galleryTitle2: "Full Gallery",
+    galleryDesc2: "Our community and travelers through the lens.",
+    reviewsTag2: "Real Testimonials",
+    reviewsTitle2: "What they say about us",
+    reviewsDesc2: "Trust is built with authentic experiences."
   }
 };
 
