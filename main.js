@@ -1,3 +1,6 @@
+import { injectSpeedInsights } from '@vercel/speed-insights';
+injectSpeedInsights();
+
 // Translations Dictionary for ES and EN
 const TRANSLATIONS = {
   es: {
