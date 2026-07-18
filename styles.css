@@ -46,6 +46,8 @@ html {
 body {
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  width: 100%;
 }
 
 a {
@@ -569,7 +571,7 @@ button {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 36px;
 }
 
@@ -745,7 +747,7 @@ button {
   max-width: 1280px;
   margin: 0 auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 32px;
 }
 
@@ -1010,5 +1012,15 @@ button {
   }
   .mobile-toggle {
     display: block;
+  }
+  .top-bar {
+    display: none; /* Fix blue margin at top on mobile */
+  }
+  .hero-stats {
+    grid-template-columns: 1fr; /* Prevent horizontal overflow */
+    gap: 16px;
+  }
+  .hero-title {
+    font-size: 2.5rem;
   }
 }
