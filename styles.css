@@ -849,6 +849,7 @@ button {
 }
 
 .booking-container {
+  width: 100%;
   max-width: 900px;
   margin: 0 auto;
   background: var(--bg-white);
@@ -856,12 +857,15 @@ button {
   border-radius: var(--radius-lg);
   padding: 48px;
   box-shadow: var(--shadow-lg);
+  overflow: hidden;
 }
 
 .booking-form {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 24px;
+  width: 100%;
+  max-width: 100%;
 }
 
 .form-group {
@@ -894,6 +898,8 @@ button {
   width: 100%;
   max-width: 100%;
   text-overflow: ellipsis;
+  min-width: 0;
+  -webkit-appearance: none;
 }
 
 .form-control:focus {
