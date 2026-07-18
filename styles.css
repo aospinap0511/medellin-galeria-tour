@@ -868,6 +868,7 @@ button {
   display: flex;
   flex-direction: column;
   gap: 8px;
+  min-width: 0;
 }
 
 .form-group label {
@@ -890,6 +891,9 @@ button {
   outline: none;
   font-weight: 500;
   transition: var(--transition);
+  width: 100%;
+  max-width: 100%;
+  text-overflow: ellipsis;
 }
 
 .form-control:focus {
@@ -1022,5 +1026,15 @@ button {
   }
   .hero-title {
     font-size: 2.5rem;
+  }
+  .booking-container {
+    padding: 24px 16px;
+  }
+  .whatsapp-float {
+    width: 52px;
+    height: 52px;
+    bottom: 20px;
+    right: 20px;
+    font-size: 1.6rem;
   }
 }
