@@ -23,3 +23,6 @@ corrections/
 
 # Composio config (if any)
 .composio/
+
+# Build artifacts
+dist/

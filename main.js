@@ -333,4 +333,27 @@ document.addEventListener("DOMContentLoaded", () => {
       link.addEventListener('click', closeDrawer);
     });
   }
+
+  // Booking Form Logic
+  const bookingForm = document.getElementById("booking-form");
+  if (bookingForm) {
+    bookingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
+      
+      const tour = document.getElementById("tour-select").value;
+      const people = document.getElementById("people-count").value;
+      const date = document.getElementById("tour-date").value;
+      const name = document.getElementById("user-name").value;
+      
+      const isEnglish = currentLang === "en";
+      const message = isEnglish 
+        ? `Hello, I would like to make a reservation.\n\n*Name:* ${name}\n*Tour:* ${tour}\n*People:* ${people}\n*Date:* ${date}`
+        : `Hola, me gustaría hacer una reserva.\n\n*Nombre:* ${name}\n*Tour:* ${tour}\n*Personas:* ${people}\n*Fecha:* ${date}`;
+      
+      const encodedMessage = encodeURIComponent(message);
+      const whatsappUrl = `https://wa.me/573216464770?text=${encodedMessage}`;
+      
+      window.open(whatsappUrl, "_blank");
+    });
+  }
 });
