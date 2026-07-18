@@ -74,7 +74,10 @@ const TRANSLATIONS = {
     btnModalBook: '<i class="fa-brands fa-whatsapp"></i> Reservar este Tour por WhatsApp',
     footerP: "Vive Medellín desde sus calles y relatos. Recorridos humanos, culturales e inolvidables.",
     footerTitle1: "Experiencias",
-    footerTitle2: "Contacto"
+    footerTitle2: "Contacto",
+    btnStory: '<i class="fa-solid fa-book-open"></i> Conoce nuestra historia',
+    btnGallery: '<i class="fa-solid fa-images"></i> Ver Galería Completa',
+    btnReviews: '<i class="fa-solid fa-comments"></i> Leer más reseñas'
   },
   en: {
     topBar1: '<i class="fa-solid fa-paintbrush"></i> Medellín is a living art gallery',
@@ -147,7 +150,10 @@ const TRANSLATIONS = {
     btnModalBook: '<i class="fa-brands fa-whatsapp"></i> Book This Tour on WhatsApp',
     footerP: "Experience Medellín through its streets and stories. Human, cultural, and unforgettable tours.",
     footerTitle1: "Experiences",
-    footerTitle2: "Contact"
+    footerTitle2: "Contact",
+    btnStory: '<i class="fa-solid fa-book-open"></i> Read our story',
+    btnGallery: '<i class="fa-solid fa-images"></i> View Full Gallery',
+    btnReviews: '<i class="fa-solid fa-comments"></i> Read more reviews'
   }
 };
 
@@ -240,17 +246,25 @@ const TOURS_DATA = {
   }
 };
 
-let currentLang = "es";
+let currentLang = localStorage.getItem("currentLang") || "es";
 
 document.addEventListener("DOMContentLoaded", () => {
-  // Language Switching Handler
+  // Apply initial language state
   const langBtns = document.querySelectorAll(".lang-btn");
+  
+  langBtns.forEach((b) => {
+    b.classList.toggle("active", b.getAttribute("data-lang") === currentLang);
+  });
+  updatePageLanguage(currentLang);
+
+  // Language Switching Handler
   langBtns.forEach((btn) => {
     btn.addEventListener("click", (e) => {
       const selectedLang = e.currentTarget.getAttribute("data-lang");
       if (selectedLang === currentLang) return;
 
       currentLang = selectedLang;
+      localStorage.setItem("currentLang", currentLang);
 
       // Toggle Active Button
       langBtns.forEach((b) => b.classList.remove("active"));
