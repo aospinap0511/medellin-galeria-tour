@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medellín Galería Tour | Historias que Revelan el Alma de Medellín</title>
+  <meta name="description" content="Vive Medellín desde sus calles y relatos. Tours guiados por locales en Comuna 13, Tour del Café en La Sierra, City Tour y experiencias auténticas.">
+  <meta name="keywords" content="Medellin tours, Comuna 13, Tour del cafe Medellin, Turismo cultural Medellin, Medellin Galeria Tour">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Medellín Galería Tour | Historias & Experiencias Auténticas">
+  <meta property="og:description" content="Recorre la Comuna 13, disfruta de un café de origen en la montaña y conoce la Medellín real con relatos inolvidables.">
+  <meta property="og:image" content="/images/comuna13_real.jpg">
+  <meta property="og:url" content="https://medellingaleria.com">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/images/logo_3.png">
+  
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  
+  <!-- Custom Styles -->
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+
+  <!-- Top Announcement Bar -->
+  <div class="top-bar">
+    <span data-i18n="topBar1"><i class="fa-solid fa-paintbrush"></i> Medellín es una galería de arte viva</span>
+    <span>•</span>
+    <span data-i18n="topBar2"><i class="fa-brands fa-whatsapp"></i> Reservas directas por WhatsApp con guías locales</span>
+  </div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <img src="/images/logo_3.png" alt="Medellín Galería Tour Logo">
+        <div class="brand-name">
+          <span class="title-main">MEDELLÍN GALERÍA</span>
+          <span class="title-sub">HISTORIAS & TOURS</span>
+        </div>
+      </a>
+
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <!-- Language Switcher -->
+        <div class="lang-switcher">
+          <button class="lang-btn active" data-lang="es">ES</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+
+        <button id="drawer-open" class="mobile-toggle" style="display: block; background: transparent; border: none; font-size: 1.8rem; cursor: pointer; color: var(--text-dark);" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <!-- Background Video -->
+    <video class="hero-video-bg" autoplay loop muted playsinline>
+      <source src="/images/hero_video.mp4" type="video/mp4">
+    </video>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-container">
+      <div class="hero-text-content">
+        <div class="hero-badge">
+          <i class="fa-solid fa-star"></i> <span data-i18n="heroBadge">Recomendado por nuestros viajeros</span>
+        </div>
+        <h1 class="hero-title" data-i18n="heroTitle">
+          Vive Medellín desde sus <span class="highlight">calles y relatos</span>
+        </h1>
+        <p class="hero-description" data-i18n="heroDesc">
+          Acompáñanos a descubrir la resiliencia de la Comuna 13, el aroma del café de origen en La Sierra y los rincones con más alma de la ciudad.
+        </p>
+        <div class="hero-actions">
+          <a href="#tours" class="btn-primary" data-i18n="btnExplore">
+            <i class="fa-solid fa-compass"></i> Ver Experiencias
+          </a>
+          <a href="https://wa.me/573216464770?text=Hola!%20Me%20gustar%C3%ADa%20m%C3%A1s%20informaci%C3%B3n" target="_blank" class="btn-secondary" data-i18n="btnTalkGuide">
+            <i class="fa-brands fa-whatsapp"></i> Hablar con un Guía
+          </a>
+        </div>
+
+        <div class="hero-stats">
+          <div class="stat-item">
+            <h3>+5,000</h3>
+            <p data-i18n="statHappy">Viajeros Felices</p>
+          </div>
+          <div class="stat-item">
+            <h3>100%</h3>
+            <p data-i18n="statLocal">Guías Locales</p>
+          </div>
+          <div class="stat-item">
+            <h3>5 ★</h3>
+            <p data-i18n="statRating">Calificación Real</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Marquee Ticker -->
+  <div class="marquee-section">
+    <div class="marquee-content">
+      <!-- Primer set -->
+      <div class="marquee-item">COMUNA 13 GRAFITI <span class="dot">•</span></div>
+      <div class="marquee-item">TOUR DEL CAFÉ EN LA SIERRA <span class="dot">•</span></div>
+      <div class="marquee-item">CITY TOUR MEDELLÍN <span class="dot">•</span></div>
+      <div class="marquee-item">BOSQUE DE NIEBLA & OASIS <span class="dot">•</span></div>
+      <div class="marquee-item">SKYDIVING ADRENALINA <span class="dot">•</span></div>
+      <!-- Segundo set (Duplicado exacto para el loop infinito al 50%) -->
+      <div class="marquee-item">COMUNA 13 GRAFITI <span class="dot">•</span></div>
+      <div class="marquee-item">TOUR DEL CAFÉ EN LA SIERRA <span class="dot">•</span></div>
+      <div class="marquee-item">CITY TOUR MEDELLÍN <span class="dot">•</span></div>
+      <div class="marquee-item">BOSQUE DE NIEBLA & OASIS <span class="dot">•</span></div>
+      <div class="marquee-item">SKYDIVING ADRENALINA <span class="dot">•</span></div>
+    </div>
+  </div>
+
+  <!-- Tours & Experiences Showcase -->
+  <section id="tours" class="tours-section">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="toursTag">Nuestras Experiencias</span>
+      <h2 class="section-title" data-i18n="toursTitle">Tours Diseñados para Conectar</h2>
+      <p class="section-description" data-i18n="toursDesc">
+        No vendemos recorridos masivos. Diseñamos experiencias íntimas donde el arte, la historia y la comunidad son los protagonistas.
+      </p>
+    </div>
+
+    <div class="tours-grid">
+      <!-- Tour Card 1 -->
+      <div class="tour-card" data-tour="comuna13">
+        <div class="tour-image-container">
+          <img src="/images/comuna13_real.jpg" alt="Comuna 13 Tour Real">
+          <span class="tour-tag" data-i18n="t1Tag">Resiliencia & Arte</span>
+          <span class="tour-price-badge">$70.000 COP</span>
+        </div>
+        <div class="tour-content">
+          <h3 class="tour-title" data-i18n="t1Title">Comuna 13: Grafiti & Transformación</h3>
+          <p class="tour-description" data-i18n="t1Desc">
+            Recorre las famosas escaleras eléctricas, descubre el significado detrás de los murales urbanos y conoce las historias reales contadas por artistas y líderes locales.
+          </p>
+          <ul class="tour-features">
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t1F1">Guía local nativo de la comunidad</span></li>
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t1F2">Show de Hip Hop & Breakdance en vivo</span></li>
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t1F3">Degustación de helado artesanal de crema</span></li>
+          </ul>
+          <div class="tour-card-footer">
+            <span class="tour-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="t1Duration">3 Horas</span></span>
+            <a href="/tour-comuna13.html" class="btn-primary" data-i18n="btnExploreCard">Explorar Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Card 2 -->
+      <div class="tour-card" data-tour="coffee">
+        <div class="tour-image-container">
+          <img src="/images/coffee_real.jpg" alt="Tour del Café La Sierra Real">
+          <span class="tour-tag" data-i18n="t2Tag">Sensorial & Tradición</span>
+          <span class="tour-price-badge">$130.000 COP</span>
+        </div>
+        <div class="tour-content">
+          <h3 class="tour-title" data-i18n="t2Title">Tour del Café de Origen en La Sierra</h3>
+          <p class="tour-description" data-i18n="t2Desc">
+            Sube a las montañas de Medellín y vive la experiencia cafetera completa: recolección de grano, despulpado, tostión y cata gourmet con vista 360° al Aburrá.
+          </p>
+          <ul class="tour-features">
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t2F1">Experiencia completa en finca cafetera</span></li>
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t2F2">Cata profesional de café especial</span></li>
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t2F3">Vista panorámica de toda la ciudad</span></li>
+          </ul>
+          <div class="tour-card-footer">
+            <span class="tour-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="t2Duration">4.5 Horas</span></span>
+            <a href="/tour-coffee.html" class="btn-primary" data-i18n="btnExploreCard">Explorar Tour</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Tour Card 3 -->
+      <div class="tour-card" data-tour="city">
+        <div class="tour-image-container">
+          <img src="/images/city_real.jpg" alt="City Tour Medellín Real">
+          <span class="tour-tag" data-i18n="t3Tag">Cultura & Contrastes</span>
+          <span class="tour-price-badge">$90.000 COP</span>
+        </div>
+        <div class="tour-content">
+          <h3 class="tour-title" data-i18n="t3Title">City Tour: Medellín al Descubierto</h3>
+          <p class="tour-description" data-i18n="t3Desc">
+            Descubre los contrastes de la ciudad: Plaza Botero, sistema Metro Cable, centro histórico, la zona roja y cómo los paisas viven y transforman su entorno día a día.
+          </p>
+          <ul class="tour-features">
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t3F1">Pasajes en Metro & Metro Cable incluidos</span></li>
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t3F2">Visita a Plaza Botero & Parques temáticos</span></li>
+            <li class="tour-feature-item"><i class="fa-solid fa-check"></i> <span data-i18n="t3F3">Narrativa auténtica sin mitos comerciales</span></li>
+          </ul>
+          <div class="tour-card-footer">
+            <span class="tour-duration"><i class="fa-regular fa-clock"></i> <span data-i18n="t3Duration">4 Horas</span></span>
+            <a href="/tour-city.html" class="btn-primary" data-i18n="btnExploreCard">Explorar Tour</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About / Story Section -->
+  <section id="about" class="about-section">
+    <div class="about-container">
+      <div class="about-graphics">
+        <img src="/images/travelers_real.jpg" alt="Viajeros reales Medellín Galería Tour">
+      </div>
+
+      <div class="about-text-content">
+        <span class="section-tag" data-i18n="aboutTag">Nuestra Historia</span>
+        <h2 data-i18n="aboutTitle">Turismo Humano & Con Propósito</h2>
+        <p data-i18n="aboutP1">
+          Nacimos con la convicción de que viajar es conectar. No llevamos a nuestros visitantes como meros espectadores; los integramos a la dinámica local, apoyando directamente a guías comunitarios, artistas del aerosol, microempresarios y caficultores antioqueños.
+        </p>
+        <p data-i18n="aboutP2">
+          Cada reserva que realizas genera un impacto económico directo en las familias de la Comuna 13 y el barrio La Sierra.
+        </p>
+        <a href="/about.html" class="btn-primary" style="margin-top: 12px;">
+          <i class="fa-solid fa-book-open"></i> Conoce nuestra historia
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Real Gallery Section -->
+  <section id="gallery" class="gallery-section">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="galleryTag">Galería Real</span>
+      <h2 class="section-title" data-i18n="galleryTitle">Momentos de Nuestros Viajeros</h2>
+      <p class="section-description" data-i18n="galleryDesc">Fotografías reales tomadas durante nuestros tours diarios.</p>
+    </div>
+
+    <div class="gallery-grid">
+      <div class="gallery-item"><img src="/images/gallery_1.jpg" alt="Galería Tour Medellín 1"></div>
+      <div class="gallery-item"><img src="/images/gallery_2.jpg" alt="Galería Tour Medellín 2"></div>
+      <div class="gallery-item"><img src="/images/gallery_3.jpg" alt="Galería Tour Medellín 3"></div>
+    </div>
+    
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/gallery.html" class="btn-primary"><i class="fa-solid fa-images"></i> Ver Galería Completa</a>
+    </div>
+  </section>
+
+  <!-- Reviews Section -->
+  <section id="reviews" class="reviews-section">
+    <div class="section-header">
+      <span class="section-tag" data-i18n="reviewsTag">Testimonios Reales</span>
+      <h2 class="section-title" data-i18n="reviewsTitle">Lo que dicen los viajeros</h2>
+      <p class="section-description" data-i18n="reviewsDesc">Opiniones auténticas de quienes ya caminaron Medellín con nosotros.</p>
+    </div>
+
+    <div class="reviews-grid">
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r1Text">
+          "El tour de la Comuna 13 con Medellín Galería Tour fue lo mejor de mi viaje a Colombia. El guía creció en el barrio y su relato te eriza la piel. ¡Recomendadísimo!"
+        </p>
+        <div class="review-user">
+          <div class="user-avatar">SL</div>
+          <div class="user-info">
+            <h4>Sarah & Lucas</h4>
+            <p>Viajeros de España • Airbnb Review</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r2Text">
+          "El Tour del Café en La Sierra tiene una vista increíble de Medellín que muy pocos turistas conocen. Probar el café directo de la finca fue una experiencia 10/10."
+        </p>
+        <div class="review-user">
+          <div class="user-avatar">MR</div>
+          <div class="user-info">
+            <h4>Michael R.</h4>
+            <p>Nómada Digital de USA • Google Review</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="review-card">
+        <div class="review-stars">★★★★★</div>
+        <p class="review-text" data-i18n="r3Text">
+          "Puntuales, amables y muy profesionales. Te hacen sentir seguros en todo momento y se nota el amor y orgullo con el que muestran su ciudad."
+        </p>
+        <div class="review-user">
+          <div class="user-avatar">CP</div>
+          <div class="user-info">
+            <h4>Camila P.</h4>
+            <p>Viajera de Argentina • Tripadvisor Review</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div style="text-align: center; margin-top: 40px;">
+      <a href="/reviews.html" class="btn-primary"><i class="fa-solid fa-comments"></i> Leer más reseñas</a>
+    </div>
+  </section>
+
+  <!-- Booking Section -->
+  <section id="booking" class="booking-section">
+    <div class="booking-container">
+      <div class="section-header" style="margin-bottom: 32px;">
+        <span class="section-tag" data-i18n="bookingTag">Reserva Fácil</span>
+        <h2 class="section-title" data-i18n="bookingTitle">Calcula y Agenda tu Tour</h2>
+        <p class="section-description" data-i18n="bookingDesc">Selecciona tus datos y te redirigiremos a WhatsApp para confirmar tu cupo al instante.</p>
+      </div>
+
+      <form id="booking-form" class="booking-form">
+        <div class="form-group">
+          <label for="tour-select" data-i18n="lblTour">Experiencia Deseada</label>
+          <select id="tour-select" class="form-control" required>
+            <option value="Comuna 13 Grafiti ($70.000 COP/persona)">Comuna 13 Grafiti & Resiliencia ($70.000 COP)</option>
+            <option value="Tour del Café La Sierra ($130.000 COP/persona)">Tour del Café en La Sierra ($130.000 COP)</option>
+            <option value="City Tour Medellín ($90.000 COP/persona)">City Tour Medellín ($90.000 COP)</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="people-count" data-i18n="lblPeople">Número de Personas</label>
+          <input type="number" id="people-count" class="form-control" min="1" max="20" value="2" required>
+        </div>
+
+        <div class="form-group">
+          <label for="tour-date" data-i18n="lblDate">Fecha del Tour</label>
+          <input type="date" id="tour-date" class="form-control" required>
+        </div>
+
+        <div class="form-group">
+          <label for="user-name" data-i18n="lblName">Tu Nombre Completo</label>
+          <input type="text" id="user-name" class="form-control" placeholder="Ej: Maria Gomez" required>
+        </div>
+
+        <button type="submit" class="btn-primary booking-btn" data-i18n="btnSubmitBooking">
+          <i class="fa-brands fa-whatsapp"></i> Confirmar Reserva por WhatsApp
+        </button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Navigation Drawer -->
+  <div class="Drawer" id="drawer" popover="manual">
+    <div class="Drawer-scroller">
+      <nav class="Drawer-sheet" tabindex="-1">
+        <div class="drawer-header">
+          <img src="/images/logo_3.png" alt="Logo" class="drawer-logo">
+          <button class="drawer-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="drawer-links">
+          <li><a href="/index.html#tours" data-i18n="navTours">Experiencias</a></li>
+          <li><a href="/about.html" data-i18n="navAbout">La Historia</a></li>
+          <li><a href="/gallery.html" data-i18n="navGallery">Galería Real</a></li>
+          <li><a href="/reviews.html" data-i18n="navReviews">Reseñas</a></li>
+          <li><a href="/index.html#booking" data-i18n="navContact">Contacto</a></li>
+        </ul>
+        <div class="drawer-footer">
+          <a href="https://wa.me/573216464770?text=Hola!%20Quiero%20reservar%20un%20tour%20con%20Medell%C3%ADn%20Galer%C3%ADa%20Tour" target="_blank" class="btn-primary" style="width: 100%; justify-content: center;" data-i18n="btnBookNow">
+            <i class="fa-brands fa-whatsapp"></i> Reservar Ahora
+          </a>
+        </div>
+      </nav>
+    </div>
+  </div>
+
+  <!-- Floating WhatsApp Widget -->
+  <a href="https://wa.me/573216464770?text=Hola!%20Estoy%20visitando%20Medell%C3%ADn%20y%20quiero%20informaci%C3%B3n%20de%20los%20tours" target="_blank" class="whatsapp-float" aria-label="Contacto por WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <a href="#" class="brand-logo">
+          <img src="/images/logo_3.png" alt="Logo">
+          <div class="brand-name">
+            <span class="title-main" style="color: var(--yellow-spray);">MEDELLÍN GALERÍA</span>
+            <span class="title-sub" style="color: #FFFFFF;">HISTORIAS & TOURS</span>
+          </div>
+        </a>
+        <p data-i18n="footerP">Vive Medellín desde sus calles y relatos. Recorridos humanos, culturales e inolvidables.</p>
+      </div>
+
+      <div>
+        <h4 class="footer-title" data-i18n="footerTitle1">Experiencias</h4>
+        <ul class="footer-links">
+          <li><a href="#tours">Comuna 13 Grafiti</a></li>
+          <li><a href="#tours">Tour del Café La Sierra</a></li>
+          <li><a href="#tours">City Tour Medellín</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h4 class="footer-title" data-i18n="footerTitle2">Contacto</h4>
+        <ul class="footer-links">
+          <li><i class="fa-brands fa-whatsapp" style="color: var(--yellow-spray);"></i> +57 321 646 4770</li>
+          <li><i class="fa-brands fa-instagram" style="color: var(--yellow-spray);"></i> @medellin_galeria_tour</li>
+          <li><i class="fa-solid fa-location-dot" style="color: var(--yellow-spray);"></i> Medellín, Colombia</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; 2026 Medellín Galería Tour. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Main JS Code -->
+  <script type="module" src="/main.js"></script>
+</body>
+</html>

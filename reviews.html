@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Reseñas de Viajeros | Medellín Galería Tour</title>
+  <meta name="description" content="Lee las reseñas y experiencias de viajeros reales que han caminado con Medellín Galería Tour.">
+  <link rel="icon" type="image/png" href="/images/logo_3.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="/styles.css">
+  <style>
+    .page-header { padding: 120px 24px 60px; background: var(--bg-subtle); text-align: center; }
+    .page-title { font-family: var(--font-display); font-size: 3rem; color: var(--text-dark); margin-bottom: 16px; text-transform: uppercase; }
+    .full-reviews { max-width: 1000px; margin: 0 auto; padding: 60px 24px; display: grid; grid-template-columns: 1fr; gap: 32px; }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <div class="nav-container">
+      <a href="/" class="brand-logo">
+        <img src="/images/logo_3.png" alt="Logo">
+        <div class="brand-name">
+          <span class="title-main">MEDELLÍN GALERÍA</span>
+          <span class="title-sub">HISTORIAS & TOURS</span>
+        </div>
+      </a>
+      <div style="display: flex; align-items: center; gap: 16px;">
+        <button id="drawer-open" class="mobile-toggle" aria-label="Menu" aria-expanded="false" aria-controls="drawer">
+          <i class="fa-solid fa-bars" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div class="page-header">
+    <span class="section-tag">Testimonios Reales</span>
+    <h1 class="page-title">Lo que dicen de nosotros</h1>
+    <p style="color: var(--text-muted); font-size: 1.1rem;">La confianza se construye con experiencias auténticas.</p>
+  </div>
+
+  <div class="full-reviews">
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "El tour de la Comuna 13 con Medellín Galería Tour fue lo mejor de mi viaje a Colombia. El guía creció en el barrio y su relato te eriza la piel. No es el típico tour comercial; te llevan a conocer a los verdaderos artistas y a entender la magnitud del cambio. ¡Recomendadísimo!"
+      </p>
+      <div class="review-user">
+        <div class="user-avatar">SL</div>
+        <div class="user-info">
+          <h4>Sarah & Lucas</h4>
+          <p>Viajeros de España • Airbnb Review</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "El Tour del Café en La Sierra tiene una vista increíble de Medellín que muy pocos turistas conocen. Caminar entre cafetales y luego hacer la cata de café allí mismo en la montaña fue una experiencia 10/10."
+      </p>
+      <div class="review-user">
+        <div class="user-avatar">MR</div>
+        <div class="user-info">
+          <h4>Michael R.</h4>
+          <p>Nómada Digital de USA • Google Review</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "Hicimos el City Tour con ellos. Son puntuales, amables y muy profesionales. Te hacen sentir súper seguros en todo momento y se nota el amor y orgullo con el que muestran el centro de su ciudad y el Metro. Excelente día."
+      </p>
+      <div class="review-user">
+        <div class="user-avatar">CP</div>
+        <div class="user-info">
+          <h4>Camila P.</h4>
+          <p>Viajera de Argentina • Tripadvisor Review</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="review-card">
+      <div class="review-stars">★★★★★</div>
+      <p class="review-text">
+        "Nunca había experimentado algo como el Bosque de Niebla. Nuestro guía fue muy paciente y sabía muchísimo de la flora local. Salir del bullicio de la ciudad a este oasis de paz valió cada centavo."
+      </p>
+      <div class="review-user">
+        <div class="user-avatar">JB</div>
+        <div class="user-info">
+          <h4>Javier B.</h4>
+          <p>Viajero de México • Google Review</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <div style="text-align: center; margin-bottom: 80px;">
+    <a href="/index.html#booking" class="btn-primary">Agenda tu propia historia</a>
+  </div>
+
+  <div class="Drawer" id="drawer" popover="manual">
+    <div class="Drawer-scroller">
+      <nav class="Drawer-sheet" tabindex="-1">
+        <div class="drawer-header">
+          <img src="/images/logo_3.png" alt="Logo" class="drawer-logo">
+          <button class="drawer-close" aria-label="Cerrar"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+        <ul class="drawer-links">
+          <li><a href="/index.html#tours">Experiencias</a></li>
+          <li><a href="/about.html">La Historia</a></li>
+          <li><a href="/gallery.html">Galería Real</a></li>
+          <li><a href="/reviews.html">Reseñas</a></li>
+          <li><a href="/index.html#booking">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>&copy; 2026 Medellín Galería Tour. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="/main.js"></script>
+</body>
+</html>
